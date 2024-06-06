@@ -1,5 +1,8 @@
 require('dotenv').config()
 const Usuario = require('../models/Usuario')
+
+//Implementei o bcrypt pois é uma biblioteca utilizada para criptografar senhas de forma segura...
+
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
@@ -9,6 +12,8 @@ async function registrar(req, res) {
     // #swagger.tags = ['Autenticacao']
 
     const { nome, email, senha } = req.body
+    
+//usei o findone para buscar somente um email
 
     const usuarioExiste = await Usuario.findOne({ email })
     if (usuarioExiste) {
@@ -54,6 +59,10 @@ async function login(req, res) {
         }
     )
 }
+
+//No meu código o module.exports torna as funções create,
+ //getAll, getById, update e remove disponíveis para serem usadas em outras partes da minha aplicação, 
+ //como em rotas de uma API.
 
 module.exports = {
     registrar,

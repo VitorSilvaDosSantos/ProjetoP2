@@ -5,7 +5,7 @@ const classificacaoSchema = yup.object().shape({
         .number('Campo estrelas precisa ser um numero')
         .required('Campo estrelas obrigatório!'),
     data_classificacao: yup
-        .date("Precisa ser um ano"),
+        .date("Precisa ser uma data valida"),
     descricao: yup
         .string('Campo descricao precisa ser um texto')
         .required('Campo descricao obrigatório!'),

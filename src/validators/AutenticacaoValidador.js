@@ -1,5 +1,13 @@
 const yup = require('yup')
+
+//O jsonwebtoken no meu código é usado para autenticação e autorização de usuários ele permite  criar,
+//assinar e verificar tokens JWT, que é utilizado para garantir que apenas usuários 
+//autenticados possam acessar partes da aplicação.
+
 const jwt = require('jsonwebtoken')
+
+//JWT SECRET é a chave secreta usada para assinar e verificar os tokens que garante a segurança e 
+//integridade.
 
 const JWT_SECRET = process.env.JWT_SECRET
 

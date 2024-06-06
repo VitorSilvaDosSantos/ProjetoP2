@@ -1,3 +1,6 @@
+//Na minha autenticacao o código configura rotas para registro e login de usuários, usando middlewares 
+//para validação de dados e funções do controlador para manipulação de requisições.
+
 const express = require('express')
 const router = express.Router()
 

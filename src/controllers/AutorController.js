@@ -6,9 +6,16 @@ async function create(req, res) {
     res.status(201).json(autorCriado)
 }
 
+//Usei sempre o AWAIT pra lidar com operações assíncronas que retornam Promises,
+//garantindo que o código aguarde a conclusão dessas operações antes de prosseguir.
+
 async function getAll(req, res) {
     res.json(await Autor.find())
  }
+
+ //Usando a função getById serve para recuperar e retornar um autor específico do
+ //banco de dados, baseado no ID fornecido na solicitação (request).
+
 async function getById(req, res) {
     const autor = await Autor.findById(req.params.id)
     if (autor) {
@@ -40,7 +47,10 @@ async function remove(req, res) {
     }
 }
 
-
+//No meu código o module.exports torna as funções create,
+ //getAll, getById, update e remove disponíveis para serem usadas em outras partes da minha aplicação, 
+ //como em rotas de uma API.
+ 
 module.exports = {
     create,
     getAll,

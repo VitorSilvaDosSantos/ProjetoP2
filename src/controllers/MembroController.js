@@ -47,6 +47,10 @@ async function remove(req, res) {
 }
 
 
+//No meu código o module.exports torna as funções create,
+ //getAll, getById, update e remove disponíveis para serem usadas em outras partes da minha aplicação, 
+ //como em rotas de uma API.
+ 
 module.exports = {
     create,
     getAll,

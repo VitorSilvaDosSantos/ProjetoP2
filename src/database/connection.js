@@ -1,3 +1,6 @@
+//Aqui é a minha conexão com o banco de dados MongoDB onde usei o Mongoose, é a biblioteca 
+//para a minha modelagem de dados no MongoDB em Node.js
+
 const mongoose = require('mongoose')
 require('dotenv').config()
 

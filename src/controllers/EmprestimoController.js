@@ -44,6 +44,8 @@ async function create(req, res) {
                 console.error('Erro ao gerar PDF:', err);
                 return;
             }
+            //Se der erro ele informará no console o erro e se gerou c o PDF ele mostrara no console
+            //que foi gerado e o caminho.
             console.log('PDF gerado com sucesso:', result.filename);
         });
 
@@ -88,6 +90,10 @@ async function remove(req, res) {
 }
 
 
+//No meu código o module.exports torna as funções create,
+ //getAll, getById, update e remove disponíveis para serem usadas em outras partes da minha aplicação, 
+ //como em rotas de uma API.
+ 
 module.exports = {
     create,
     getAll,
