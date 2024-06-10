@@ -1,0 +1,706 @@
+{
+	"info": {
+		"_postman_id": "cc5592b2-dd10-42e9-abd9-75975f493ca0",
+		"name": "ProjetoP2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33820936",
+		"_collection_link": "https://vitor0.postman.co/workspace/9c791cc6-dd3a-46ce-8bab-c35dbb49cf45/collection/33820936-cc5592b2-dd10-42e9-abd9-75975f493ca0?action=share&source=collection_link&creator=33820936"
+	},
+	"item": [
+		{
+			"name": "Autenticacao",
+			"item": [
+				{
+					"name": "Registrar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"vitor\",\r\n    \"email\": \"vitor@vitor.com\",\r\n    \"senha\": \"asdfg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"registro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"vitor@vitor.com\",\r\n    \"senha\": \"asdfg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/auth/login",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autor",
+			"item": [
+				{
+					"name": "Buscar Autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/autores",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Autor por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/autores/666752d3c630944a0dbc0817",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"autores",
+								"666752d3c630944a0dbc0817"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Autor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Andressa Alexandra \",\r\n    \"data_nascimento\": \"2024-01-13\",\r\n    \"nacionalidade\": \"Brasileira\",\r\n    \"biografia\":\"Futurista\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/autores",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Autor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/autores/6661fa34506213dac5109e63",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"autores",
+								"6661fa34506213dac5109e63"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Autor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Cleiton Santos da Silva\",\r\n    \"data_nascimento\": \"2000-02-24\",\r\n    \"nacionalidade\": \"Brasileiro\",\r\n    \"biografia\":\"Promissor\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/autores/666752d3c630944a0dbc0817",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"autores",
+								"666752d3c630944a0dbc0817"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Classificacao",
+			"item": [
+				{
+					"name": "Buscar Classificacao",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/classificacoes",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"classificacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarClassificacao ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/classificacoes/66620bf423fe0c03386b82da",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"classificacoes",
+								"66620bf423fe0c03386b82da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Classificacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estrelas\":5,\r\n    \"data_classificacao\": \"2024\",\r\n    \"descricao\": \"Maiores\",\r\n    \"membro\":\"66620bde23fe0c03386b82d8\",\r\n    \"livro\": \"6660d022ae9cecd317501385\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/classificacoes",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"classificacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Classificacao",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}",
+							"host": [
+								"{{projetop2}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Classificacao",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estrelas\":9,\r\n    \"data_classificacao\": \"2024-01-14\",\r\n    \"descricao\": \"Maiores\",\r\n    \"membro\":\"66620bde23fe0c03386b82d8\",\r\n    \"livro\": \"6660d022ae9cecd317501385\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/classificacoes/66620bf423fe0c03386b82da",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"classificacoes",
+								"66620bf423fe0c03386b82da"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Emprestimo",
+			"item": [
+				{
+					"name": "Buscar Emprestimo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/emprestimos",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"emprestimos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Emprestimo por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/emprestimos/6662302295e4d940336f9020",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"emprestimos",
+								"6662302295e4d940336f9020"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Emprestimo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Locado\",\r\n    \"data_devolucao\": \"2024-10-10\",\r\n    \"data_emprestimo\": \"2024-05-05\",\r\n    \"membro\": \"6660d8103ce20f9b1dfde997\",\r\n    \"livro\": \"6660d022ae9cecd317501385\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/emprestimos/",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"emprestimos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Emprestimo",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Emprestimo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Locado Com Sucesso\",\r\n    \"data_devolucao\": \"2024-10-10\",\r\n    \"data_emprestimo\": \"2024-05-05\",\r\n    \"membro\": \"6660d8103ce20f9b1dfde997\",\r\n    \"livro\": \"6660d022ae9cecd317501385\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/emprestimos/6660d2313fa19feb79824b5d",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"emprestimos",
+								"6660d2313fa19feb79824b5d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Livro",
+			"item": [
+				{
+					"name": "Buscar Livro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/livros",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Livro por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/livros/6660d022ae9cecd317501385",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"livros",
+								"6660d022ae9cecd317501385"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Livro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Pequeno Principe\",\r\n    \"ano_publicacao\": 1990,\r\n    \"editora\": \"Paixão\",\r\n    \"genero\": \"Drama\",\r\n    \"autor\": \"665f7b012680af4f3b0fedb8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/livros",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"livros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Livro",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Livro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Pequeno Principe da Floresta\",\r\n    \"ano_publicacao\": 1990,\r\n    \"editora\": \"Paixão\",\r\n    \"genero\": \"Drama\",\r\n    \"autor\": \"665f7b012680af4f3b0fedb8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/livros/6660d022ae9cecd317501385",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"livros",
+								"6660d022ae9cecd317501385"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Membro",
+			"item": [
+				{
+					"name": "Buscar Membro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/membros",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"membros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Membro por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{projetop2}}/membros/6662127f135431345ccae851",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"membros",
+								"6662127f135431345ccae851"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Membro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Golias\",\r\n    \"email\": \"goliasbala@gmail.com\",\r\n    \"cpf\": \"038.137.780-61\",\r\n    \"telefone\": \"(61) 98758-5487\",\r\n    \"endereco\": {\r\n        \"cep\": \"85234-000\",\r\n        \"uf\": \"DF\",\r\n        \"logradouro\": \"qnp 14\",\r\n        \"localidade\": \"Ceilândia\",\r\n        \"bairro\": \"Psul\",\r\n        \"numero\": \"19\",\r\n        \"complemento\": \"colegio\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/membros",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"membros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Membro",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Membro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"GoliasAnderson\",\r\n    \"email\": \"goliasbala@gmail.com\",\r\n    \"cpf\": \"038.137.780-61\",\r\n    \"telefone\": \"(61) 98758-5487\",\r\n    \"endereco\": {\r\n        \"cep\": \"85234-000\",\r\n        \"uf\": \"DF\",\r\n        \"logradouro\": \"qnp 14\",\r\n        \"localidade\": \"Ceilândia\",\r\n        \"bairro\": \"Psul\",\r\n        \"numero\": \"19\",\r\n        \"complemento\": \"colegio\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/membros/6662127f135431345ccae851",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"membros",
+								"6662127f135431345ccae851"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Buscar Usuario",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Usuario por id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"vitor\",\r\n    \"email\": \"vitor@vitor.com\",\r\n    \"senha\": \"asdfg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{projetop2}}/usuario",
+							"host": [
+								"{{projetop2}}"
+							],
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Usuario",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpdG9yQHZpdG9yLmNvbSIsImlhdCI6MTcxODA0NzMxOSwiZXhwIjoxNzIwNTMxMzE5fQ.hPcLlQtz-UIbfha35_e0Zh1YpCVtxu7B-9gzTAd0gac",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "projetop2",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string"
+		}
+	]
+}
